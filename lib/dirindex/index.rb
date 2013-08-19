@@ -53,9 +53,8 @@ module Dirindex
     end
 
     def update
-      return init
       # mark all as old
-      @index.each {|entry|
+      @index.each {|paht, entry|
         entry["state"] = :old                
       }
 
